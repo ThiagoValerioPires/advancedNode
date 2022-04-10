@@ -22,7 +22,6 @@ export class FacebookAuthenticationService implements FacebookAuthentication {
       const token = await this.crypto.generateToken({ key: id, expirationInMs: AccessToken.expirationInMs })
       return new AccessToken(token)
     }
-
     return new AuthenticationError()
   }
 }
